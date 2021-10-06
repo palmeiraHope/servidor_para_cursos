@@ -1,0 +1,15 @@
+{
+    "headers": ["command", "example", "description"],
+    "rows": [
+        { "command": "git branch", "example": "$ git branch", "description": "lista as branch" },
+        { "command": "<div>git branch</div><div>[[options]|[arguments]]</div>", "example": "$ git branch seila", "description": "cria uma nova ramificação baseado pela branch atual" },
+        { "command": "<div>git branch</div><div>[[options]|[arguments]]</div>", "example": "$ git branch seila main", "description": "cria uma nova ramificação baseado pela branch informada, no exemplo é a [main]" },
+        { "command": "git status", "example": "$ git status", "description": "realiza a listagem de modificações do ramo local, informando o que foi realizado" },
+        { "command": "git checkout [BranchOrOrigin]", "example": "$ git checkout 3333-Atividade2", "description": "muda para o ramo 3333-Atividade2" },
+        { "command": "git checkout [PathAndFile]", "example": "$ git checkout teste.js", "description": "remove modificações no arquivo" },
+        { "command": "git add", "example": "<pre>$ git add .\n$ git add teste.js</pre>", "description": "'add .' adiciona todos os arquivos adicionados, 'add teste.js' adiciona apenas o arquivo teste.js" },
+        { "command": "git commit -m \"\"", "example": "$ git commit -m \"subindo arquivos seila\"", "description": "adiciona descrição para as modificações" },
+        { "command": "git push [BranchName]", "example": "$ git push seila", "description": "sobe as modificações com descrição para o repositorio remoto" },
+        { "command": "git push origin [BranchName]", "example": "$ git push origin seila", "description": "sobe as modificações com descrição para o repositorio remoto, mas antes cria caso não exista no repositorio remoto" }
+    ]
+}

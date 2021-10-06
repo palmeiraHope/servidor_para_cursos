@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="/js/curso.js"></script>
+    <link rel="stylesheet" href="/css/curso.css">
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(value, index) in values" :key="index">
+                <div class="main-menu-line"><a href="#" @click="(event) => routerclick(event, value, index)">{{ value.path }}</a></div>
+                <ul>
+                    <li v-for="(data, dindex) in value.data" :key="index + dindex" style="margin-left: 10px;" v-if="value.on">
+                        <a href="#" @click="(event) => videoclick(event, value, data)">{{ data }}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div>
+            <h4>{{ source }}</h4>
+            <video id="videoElement" v-if="source" width="100%" controls>
+                <source :src="source" type="video/mp4">
+                <source :src="source" type="video/ogg">
+            </video>
+        </div>
+    </div>
+</body>
+</html>

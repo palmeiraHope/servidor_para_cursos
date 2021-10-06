@@ -1,0 +1,67 @@
+html, body, #app {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+#app {
+    display: flex;
+}
+
+#app > ul {
+    width: 200px;
+    height: 100%;
+    padding: 5px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+    background-color: #090909;
+}
+
+ul > li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #323232;
+    list-style: none;
+}
+
+ul > li > div > a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+ul > li > ul > li > a {
+    text-decoration: none;
+    font-weight: 400;
+    background-color: #484848;
+    text-transform: uppercase;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+#app > div {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#app > div > h4 {
+    width: 100%;
+    height: 100px;
+}
+
+#app > div > video {
+    width: 100%;
+    height: calc(100% - 100px);
+}
